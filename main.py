@@ -26,6 +26,7 @@ app_id = os.environ.get("APP_ID", "wx6619e83a010dffbb")
 app_secret = os.environ.get("APP_SECRET", "74288dc49a81c48df2524da1e50899e6")
 user_id = os.environ.get("USER_ID", "oSPvn6Ll-uN_7DHAp2fBkOQzurmc")
 template_id = os.environ.get("TEMPLATE_ID", "W6qTf5HY8yLk4nOPFvPzhDapxfeJCeHEthoLQivLSEs")
+user_2_id = "oSPvn6EehyAfw3cpdjM3Ey8fIaKk"
 
 # start_date = os.environ['START_DATE']
 # city = os.environ['CITY']
@@ -117,4 +118,5 @@ week = week_list[today_trans.isoweekday()-1]
 data = {"date":{"value":"{} {}".format(today_trans, week)}, "weather":{"value":wea},"temperature":{"value":temperature},
 "temperature_low":{"value":tempn}, "love_days":{"value":get_count()},"birthday_left":{"value":get_birthday()},"words":{"value":get_words(), "color":get_random_color()}}
 res = wm.send_template(user_id, template_id, data)
+res_2 = wm.send_template(user_2_id, template_id, data)
 print(res)
