@@ -18,7 +18,7 @@ from time import time, localtime
 
 today = datetime.now()
 
-start_date = os.environ.get('START_DATE', '2023-5-23')
+start_date = os.environ.get('START_DATE', '2023-6-01')
 province = os.environ.get('PROVINCE', '陕西')
 city = os.environ.get('CITY', '西安')
 birthday = os.environ.get('BIRTHDAY', '03-21')
